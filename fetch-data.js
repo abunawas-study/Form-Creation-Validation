@@ -9,14 +9,14 @@ async function fetchUserData() {
         }
         const  users = await response.json();
         dataContainer.innerHTML = '';
-        const usersList = document.createElement('ul');
+        const userList = document.createElement('ul');
         users.forEach(user => {
             const ListItem = document.createElement('li');
             ListItem.textContent = `${user.name}`;
-            usersList.appendChild(ListItem);
+            userList.appendChild(ListItem);
             
         });
-        dataContainer.appendChild(usersList);
+        dataContainer.appendChild(userList);
     }
 
     catch(error){
